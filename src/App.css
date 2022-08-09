@@ -40,3 +40,7 @@ th {
 .btn:hover{
   background-color: #293B5B;
 }
+
+.data {
+  color: white;
+}
