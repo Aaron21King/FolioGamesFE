@@ -27,7 +27,16 @@ th {
 
 .btn {
   width: 10vh;
+  height: 4vh;
   margin: 10px;
   font-size: small;
+  text-align: center;
+  padding: 0;
+  background-color: #4A7DEE;
   display: inline-block;
+  border-color: white;
+}
+
+.btn:hover{
+  background-color: #293B5B;
 }
