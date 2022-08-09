@@ -1,6 +1,7 @@
 ///import DataFetching from "./DataFetching";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BsFillTrashFill } from "react-icons/bs";
 
 function Points(params) {
   const [get, setGet] = useState([]);
@@ -32,7 +33,7 @@ function Points(params) {
           {get.map((get) => {
             return (
               <tr>
-                <th scope="row">{ + 1}</th>
+                <th scope="row">{+1}</th>
                 <td>{get.name}</td>
                 <td>{get.points}</td>
                 <td>
@@ -41,6 +42,9 @@ function Points(params) {
                   </button>
                   <button type="button" className="btn btn-primary">
                     +5
+                  </button>
+                  <button type="button" className="btn btn-danger">
+                    <BsFillTrashFill />
                   </button>
                 </td>
               </tr>
