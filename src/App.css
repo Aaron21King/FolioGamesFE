@@ -5,13 +5,14 @@
 body {
   background-image: url("../public/images/pattern.png");
   width: 100%;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 100%;
+  display: inline-table;
 }
 
 .img-fluid {
-  height: 70vh;
-  margin-top: -10vh;
+  margin-top: -2%;
+  filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
 }
 
 .table {
