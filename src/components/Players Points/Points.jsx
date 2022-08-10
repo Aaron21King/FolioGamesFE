@@ -1,11 +1,13 @@
-///import DataFetching from "./DataFetching";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BsFillTrashFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
-function Points(params) {
+function Points() {
   const [posts, setPosts] = useState([]);
   let rowCounter = 1;
+  const navigate = useNavigate();
+
   useEffect(() => {
     axios
       .get("http://localhost:8000/api/players")
@@ -16,13 +18,13 @@ function Points(params) {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   const handleDelete = (post) => {
     axios
       .delete(`http://localhost:8000/api/players/${post._id}`)
       .then((res) => {
-        setPosts(post.filter((p) => p._id !== post._id));
+        setPosts(posts.filter((p) => p._id !== post._id));
       })
       .catch((err) => {
         console.log(err);
@@ -61,10 +63,13 @@ function Points(params) {
       });
   };
 
+  const navigateToPodium = () => {
+    navigate("/podium");
+  };
+
   return (
     <div className="bg-image">
       <img src="images/logo.png" className="img-fluid" alt="..."></img>
-
 
       <table className="table table-dark table-striped">
         <thead>
@@ -110,6 +115,13 @@ function Points(params) {
           })}
         </tbody>
       </table>
+      <button
+        type="button"
+        className="btn btn-success"
+        onClick={navigateToPodium}
+      >
+        🍾🍾🍾 Go to Poodium 🥇🥈🥉
+      </button>
     </div>
   );
 }

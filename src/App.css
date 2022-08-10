@@ -15,6 +15,17 @@ body {
   filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
 }
 
+.img-fluid2 {
+  margin-top: 2%;
+  filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
+}
+
+.img-medals {
+  max-width: 50%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .table {
   width: 100vh;
   margin-left: auto;
@@ -53,8 +64,38 @@ th {
   color: white;
 }
 
-.input-group{
+.input-group {
   width: 50%;
   align-items: center;
   padding: 2%;
+}
+
+.btn.btn-success {
+  margin-bottom: 2%;
+}
+
+.podium-names {
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: center;
+}
+
+.first {
+  color: white;
+  position: relative;
+  right:16%;
+}
+.second {
+  color: white;
+  position: relative;
+  left: 0%;
+}
+.third {
+  color: white;
+  position: relative;
+  left: 16%;
+}
+
+.podium {
+  justify-content: center;
 }
