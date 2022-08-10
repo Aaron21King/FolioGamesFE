@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BsFillTrashFill } from "react-icons/bs";
 
 function Players(params) {
   const [get, setGet] = useState([]);
