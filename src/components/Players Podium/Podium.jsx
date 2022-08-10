@@ -8,14 +8,20 @@ function Podium() {
         className="img-fluid2"
         alt="..."
       ></img>
-      <div className="podium">
-        <img src="images/medals.png" alt="" className="img-medals" />
-        <div className="podium-names">
-          <span className="first">Noe</span>
-          <span className="second">Aaron</span>
-          <span className="third">Javier</span>
+      <section className="podium-medals">
+        <div className="second">
+          <img src="images/silver.png" alt="" className="img-medals" />
+          <h1>Noe</h1>
         </div>
-      </div>
+        <div className="first">
+          <img src="images/gold.png" alt="" className="img-medals-first" />
+          <h1>Javier</h1>
+        </div>
+        <div className="third">
+          <img src="images/bronze.png" alt="" className="img-medals" />
+          <h1>Aaron</h1>
+        </div>
+      </section>
     </div>
   );
 }

@@ -20,12 +20,6 @@ body {
   filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
 }
 
-.img-medals {
-  max-width: 50%;
-  height: auto;
-  vertical-align: middle;
-}
-
 .table {
   width: 100vh;
   margin-left: auto;
@@ -74,28 +68,39 @@ th {
   margin-bottom: 2%;
 }
 
-.podium-names {
-  display: flex;
-  margin-bottom: 5%;
-  justify-content: center;
-}
-
 .first {
+  flex: 1;
   color: white;
-  position: relative;
-  right:16%;
+  font-size: 50px;
 }
 .second {
+  flex: 1;
   color: white;
-  position: relative;
-  left: 0%;
+  font-size: 50px;
 }
 .third {
+  flex: 1;
   color: white;
-  position: relative;
-  left: 16%;
+  font-size: 50px;
 }
 
-.podium {
+.podium-medals {
   justify-content: center;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+.img-medals {
+  max-width: 25%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.img-medals-first {
+  max-width: 40%;
+  height: auto;
+  vertical-align: middle;;
+
 }
