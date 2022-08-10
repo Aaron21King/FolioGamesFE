@@ -1,3 +1,11 @@
+# Folio Games Project
+
+Description:
+Folio Games Rank shows the levels rank based on the points of the baseball batting cages, and how that’s changed over time
+
+Requirements:
+* 
+* 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,18 +4,63 @@ import axios from "axios";
 import { BsFillTrashFill } from "react-icons/bs";
 
 function Points(params) {
-  const [get, setGet] = useState([]);
+  const [posts, setPosts] = useState([]);
+  let rowCounter = 1;
   useEffect(() => {
     axios
       .get("http://localhost:8000/api/players")
       .then((res) => {
         console.log(res);
-        setGet(res.data);
+        setPosts(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   });
+
+  const handleDelete = (post) => {
+    axios
+      .delete(`http://localhost:8000/api/players/${post._id}`)
+      .then((res) => {
+        setPosts(post.filter((p) => p._id !== post._id));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleUpdate3 = (post) => {
+    axios
+      .put(`http://localhost:8000/api/players/${post._id}`, {
+        points: (post.points += 3),
+      })
+      .then((res) => {
+        const postsClone = [...posts];
+        const index = postsClone.indexOf(post);
+        postsClone[index] = { ...post };
+        setPosts(postsClone);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleUpdate5 = (post) => {
+    axios
+      .put(`http://localhost:8000/api/players/${post._id}`, {
+        points: (post.points += 5),
+      })
+      .then((res) => {
+        const postsClone = [...posts];
+        const index = postsClone.indexOf(post);
+        postsClone[index] = { ...post };
+        setPosts(postsClone);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="bg-image">
       <img src="images/logo.png" className="img-fluid" alt="..."></img>
@@ -30,39 +75,38 @@ function Points(params) {
           </tr>
         </thead>
         <tbody>
-          {get.map((get) => {
+          {posts.map((post) => {
             return (
-              <tr>
-                <th scope="row">{+1}</th>
-                <td>{get.name}</td>
-                <td>{get.points}</td>
+              <tr key={post._id}>
+                <th scope="row">{rowCounter++}</th>
+                <td>{post.name}</td>
+                <td>{post.points}</td>
                 <td>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => handleUpdate3(post)}
+                  >
                     +3
                   </button>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => handleUpdate5(post)}
+                  >
                     +5
                   </button>
-                  <button type="button" className="btn btn-danger">
+                  <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => handleDelete(post)}
+                  >
                     <BsFillTrashFill />
                   </button>
                 </td>
               </tr>
             );
           })}
-          {/* <tr>
-          <th scope="row">1 </th>
-          <td>{name}</td>
-          <td>{points}</td>
-          <td>
-            <button type="button" className="btn btn-primary">
-              +3
-            </button>
-            <button type="button" className="btn btn-primary">
-              +5
-            </button>
-          </td>
-        </tr> */}
         </tbody>
       </table>
     </div>
