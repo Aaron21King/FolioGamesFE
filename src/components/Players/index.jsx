@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BsFillTrashFill } from "react-icons/bs";
+import {BrowserRouter as Router,Route,Routes,Link} from "react-router-dom";
 import '../Players/players.css';
 
 function Players(params) {
@@ -43,6 +44,13 @@ function Players(params) {
           })}
         </tbody>
       </table>
+      <div className="nextWindow">
+      <Router>
+        <Link to="/about">
+          <button>Empezar FolioGames</button>
+        </Link>
+    </Router>
+      </div>
     </div>
   );
 }
