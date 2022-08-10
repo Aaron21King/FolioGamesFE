@@ -65,6 +65,14 @@ function Points(params) {
     <div className="bg-image">
       <img src="images/logo.png" className="img-fluid" alt="..."></img>
 
+      <form>
+        <div className="input-group">
+          <span className="input-group-text">Name and Points</span>
+          <input type="text" aria-label="First name" className="form-control" />
+          <input type="text" aria-label="Last name" className="form-control" />
+        </div>
+      </form>
+
       <table className="table table-dark table-striped">
         <thead>
           <tr>
