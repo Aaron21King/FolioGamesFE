@@ -17,14 +17,17 @@ function Players(params) {
   });
   return (
     <div className="bg-image">
-      <img src="images/logo.png" className="img-fluid" alt="..."></img>
-
+      <img src="images/logo.png"  className="img-fluid" alt="..."></img>
+      <div className="submitUser">
+      <input style={{borderRadius: "7px",width:"17rem", height:"2.5rem"}} type="text"  name="usuario"></input>
+      <input style={{borderRadius: "7px",width:"7rem", height:"2.5rem"}} type="submit" value="Agregar"></input>
+      </div>
+        <hr></hr>
       <table className="table table-dark table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            
           </tr>
         </thead>
         <tbody>
@@ -36,19 +39,6 @@ function Players(params) {
               </tr>
             );
           })}
-          {/* <tr>
-          <th scope="row">1 </th>
-          <td>{name}</td>
-          <td>{points}</td>
-          <td>
-            <button type="button" className="btn btn-primary">
-              +3
-            </button>
-            <button type="button" className="btn btn-primary">
-              +5
-            </button>
-          </td>
-        </tr> */}
         </tbody>
       </table>
     </div>
