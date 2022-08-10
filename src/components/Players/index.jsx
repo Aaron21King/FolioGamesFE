@@ -19,9 +19,9 @@ function Players(params) {
   return (
     <div className="bg-image">
       <img src="images/logo.png"  className="img-fluid" alt="..."></img>
-      <div className="submit">
-      <input type="text" name="usuario"></input>
-      <input type="submit" value="Enviar datos"></input>
+      <div className="submitUser">
+      <input style={{borderRadius: "7px",width:"17rem", height:"2.5rem"}} type="text"  name="usuario"></input>
+      <input style={{borderRadius: "7px",width:"7rem", height:"2.5rem"}} type="submit" value="Agregar"></input>
       </div>
         <hr></hr>
       <table className="table table-dark table-striped">
