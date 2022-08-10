@@ -65,6 +65,7 @@ function Points(params) {
     <div className="bg-image">
       <img src="images/logo.png" className="img-fluid" alt="..."></img>
 
+
       <table className="table table-dark table-striped">
         <thead>
           <tr>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BsFillTrashFill } from "react-icons/bs";
 import {BrowserRouter as Router,Route,Routes,Link} from "react-router-dom";
 import '../Players/players.css';
 
@@ -30,7 +29,6 @@ function Players(params) {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            
           </tr>
         </thead>
         <tbody>
