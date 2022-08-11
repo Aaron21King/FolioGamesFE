@@ -23,6 +23,17 @@ function Podium() {
       });
   }, []);
 
+  const handleDelete = (post) => {
+    axios
+      .delete("http://localhost:8000/api/delete")
+      .then((res) => {
+        navigateToPrincipal();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const navigateToPrincipal = () => {
     navigate("/");
   };
@@ -83,11 +94,7 @@ function Podium() {
         alt="..."
       ></img>
       {isLoading ? <LoadingSpinner /> : renderPodium}
-      <button
-        type="button"
-        className="btn btn-success"
-        onClick={navigateToPrincipal}
-      >
+      <button type="button" className="btn btn-success" onClick={handleDelete}>
         Start a New Game
       </button>
     </div>
