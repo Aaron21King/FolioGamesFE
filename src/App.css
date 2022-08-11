@@ -70,18 +70,26 @@ th {
 
 .first {
   flex: 1;
-  color: white;
-  font-size: 50px;
+  color: darkred;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  font-family: "Oleo Script Swash Caps", cursive;
 }
 .second {
   flex: 1;
-  color: white;
+  color: darkred;
   font-size: 50px;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  font-family: "Oleo Script Swash Caps", cursive;
 }
 .third {
   flex: 1;
-  color: white;
+  color: darkred;
   font-size: 50px;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  font-family: "Oleo Script Swash Caps", cursive;
 }
 
 .podium-medals {
@@ -90,17 +98,21 @@ th {
   width: 100%;
   box-sizing: border-box;
   flex-direction: row;
+  margin-top: 4%;
 }
 
 .img-medals {
   max-width: 25%;
   height: auto;
   vertical-align: middle;
+  filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
+  margin-bottom: 3%;
 }
 
 .img-medals-first {
   max-width: 40%;
   height: auto;
-  vertical-align: middle;;
-
+  vertical-align: middle;
+  filter: drop-shadow(1px 1px 10px black) drop-shadow(-1px -1px 10px black);
+  margin-bottom: 3%;
 }
