@@ -63,7 +63,7 @@ function Players(params) {
         <input
           style={{ borderRadius: "7px", width: "7rem", height: "2.5rem" }}
           type="submit"
-          value="Agregar"
+          value="Add"
           onClick={addPost}
         ></input>
       </div>
