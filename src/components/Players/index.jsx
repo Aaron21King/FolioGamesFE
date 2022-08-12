@@ -67,7 +67,7 @@ function Players(params) {
           onClick={addPost}
         ></input>
       </div>
-      <hr></hr>
+      <br></br>
       <table className="table table-dark table-striped">
         <thead>
           <tr>
