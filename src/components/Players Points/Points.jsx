@@ -35,6 +35,38 @@ function Points() {
       });
   };
 
+  const handleUpdate1 = (post) => {
+    axios
+      .put(`http://localhost:8000/api/players/${post._id}`, {
+        points: (post.points += 1),
+      })
+      .then((res) => {
+        const postsClone = [...posts];
+        const index = postsClone.indexOf(post);
+        postsClone[index] = { ...post };
+        setPosts(postsClone);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleUpdate2 = (post) => {
+    axios
+      .put(`http://localhost:8000/api/players/${post._id}`, {
+        points: (post.points += 2),
+      })
+      .then((res) => {
+        const postsClone = [...posts];
+        const index = postsClone.indexOf(post);
+        postsClone[index] = { ...post };
+        setPosts(postsClone);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const handleUpdate3 = (post) => {
     axios
       .put(`http://localhost:8000/api/players/${post._id}`, {
@@ -51,10 +83,10 @@ function Points() {
       });
   };
 
-  const handleUpdate5 = (post) => {
+  const handleUpdate4 = (post) => {
     axios
       .put(`http://localhost:8000/api/players/${post._id}`, {
-        points: (post.points += 5),
+        points: (post.points += 4),
       })
       .then((res) => {
         const postsClone = [...posts];
@@ -96,6 +128,20 @@ function Points() {
                 <button
                   type="button"
                   className="btn btn-primary"
+                  onClick={() => handleUpdate1(post)}
+                >
+                  +1
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => handleUpdate2(post)}
+                >
+                  +2
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary"
                   onClick={() => handleUpdate3(post)}
                 >
                   +3
@@ -103,9 +149,9 @@ function Points() {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  onClick={() => handleUpdate5(post)}
+                  onClick={() => handleUpdate4(post)}
                 >
-                  +5
+                  +4
                 </button>
                 <button
                   type="button"
