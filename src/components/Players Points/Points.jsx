@@ -99,6 +99,22 @@ function Points() {
       });
   };
 
+  const handleUpdate5 = (post) => {
+    axios
+      .put(`http://localhost:8000/api/players/${post._id}`, {
+        points: (post.points += 5),
+      })
+      .then((res) => {
+        const postsClone = [...posts];
+        const index = postsClone.indexOf(post);
+        postsClone[index] = { ...post };
+        setPosts(postsClone);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const navigateToPodium = () => {
     navigate("/podium");
   };
@@ -152,6 +168,13 @@ function Points() {
                   onClick={() => handleUpdate4(post)}
                 >
                   +4
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => handleUpdate5(post)}
+                >
+                  +5
                 </button>
                 <button
                   type="button"
