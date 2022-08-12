@@ -41,7 +41,13 @@ function Players(params) {
         setPosts([...posts]);
       });
   };
-
+  //let refresh = document.getElementById('refresh');
+  //refresh.addEventListener('click',_=>{
+   // refresh.reload();
+  //})
+  function recargar(){
+    window.location.href = window.location.href;
+  }
   return (
     <div className="bg-image">
       <img src="images/logo.png" className="img-fluid" alt="..."></img>
@@ -80,7 +86,7 @@ function Players(params) {
           })}
         </tbody>
       </table>
-      <button onClick={sendData} type="button" className="btn btn-success">
+      <button id="refresh" value={recargar} onClick={sendData}  type="button" className="btn btn-success">
         <Link
           style={{ color: "white", textDecorationLine: "none" }}
           to="/points"
